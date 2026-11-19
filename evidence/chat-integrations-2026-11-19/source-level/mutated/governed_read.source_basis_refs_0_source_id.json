@@ -1,0 +1,64 @@
+{
+  "acting_principal_ref": "user_abc123",
+  "admitted_result_ref": "sha256:f71f660ac45f84f6f94529fdd61d0024c38ab196f4c19f52b1ffab4b6ab3cde3",
+  "artifact_classes_covered": [
+    "governed_read_record",
+    "acting_principal_declaration",
+    "read_basis_identity",
+    "read_source_basis"
+  ],
+  "artifact_classes_excluded": [
+    "read_result_bytes",
+    "principal_identity_verification",
+    "source_edition_identity"
+  ],
+  "attestation_limits": [
+    "This receipt records that a governed read occurred against a declared basis under stated custody. It does not establish that the acting principal's identity was verified, that the basis content is accurate or true, that any admitted result is correct, or that any downstream reliance is warranted. A refused read is recorded as activity, not adjudicated."
+  ],
+  "basis_snapshot_digest": "sha256:35f7e9b80ccc338805a96b8a5cbc2aa62b4cd40754488508b66e4eb674f208e2",
+  "basis_version_ref": "counterpedia:record:EAST-PALESTINE-ASSESSMENT-0001@east-palestine-assessment-0001-admission-0002",
+  "boundary_id": "b:counterpedia-mcp:deploy0-a2a",
+  "boundary_type": "governed_read_boundary",
+  "extensions": {},
+  "identity_posture": "declared",
+  "issued_at": "2026-11-19T16:46:00Z",
+  "issuer_id": "issuer:counterpedia:counterpedia-mcp",
+  "machine_limitations": [
+    {
+      "code": "CONTENT_NOT_VERIFIED"
+    }
+  ],
+  "produced_receipt_refs": [
+    "sha256:4f81df49dbd9ae114d77003c009bae4d86675dbb55b50049c3b9f476ba343014",
+    "sha256:c7d64276bb8d99362be64e5ae3fb7ef43d797278468a006b165af3ef029cc768"
+  ],
+  "profile_id": "srs.activity.governed_read",
+  "profile_version": "v0.2",
+  "protocol_binding": "governed-read-pipeline",
+  "read_disposition": "admitted",
+  "read_request_ref": "sha256:00829c22b2398be7d57147c5d2806d15b97808fdf5923355979f9dd87aad5c5c",
+  "receipt_id": "urn:srs:receipt:governed_read:bbcdd55b-5574-4931-a2c6-6d36b2e8e0f3",
+  "receipt_kind": "governed_read",
+  "receipt_signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC8785-JCS",
+    "key_id": "issuer.counterpedia.counterpedia-mcp/receipt-signing/v20261116",
+    "signature": "h1AXdZCOYRF8gvT8NZ7SDTvu5zDxXtqq00tMtqIogHVfJ_rAm9Zo82gm6IPYsQ8DrfbyV6O-7g6BPAIgEr5KDQ"
+  },
+  "receipt_type": "provenance",
+  "receipt_version": "srs.core.v5.1",
+  "runtime_instance_id": "rt:counterpedia-mcp:deploy0-a2a",
+  "source_basis_refs": [
+    {
+      "capture_hash": "sha256:cca48e3523dca01a34488b3b5a6c28b6a05b485c895b21fc15e9304fa61da7ac",
+      "source_id": "cp:source:01a1ca39-2cbc-8660-9202-d2aa7ab120dc"
+    },
+    {
+      "capture_hash": "sha256:8dd310ba15cb5c6a0dede7e7166ea2999ae63a22a8ffca267d40fba92463391f",
+      "source_id": "cp:source:01a1ca39-2cd5-7caa-b367-0edb844733c1"
+    }
+  ],
+  "source_set_digest": "sha256:96241dd07af6b5b1e59bf0f1c2dea28d2e95ac7bc34b26fccb002a757766265c",
+  "subject_ref": "counterpedia:record:EAST-PALESTINE-ASSESSMENT-0001@east-palestine-assessment-0001-admission-0002",
+  "visibility": "LOCAL"
+}

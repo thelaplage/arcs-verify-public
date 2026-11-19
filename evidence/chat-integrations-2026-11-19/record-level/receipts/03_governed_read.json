@@ -1,0 +1,51 @@
+{
+  "acting_principal_ref": "user_abc123",
+  "admitted_result_ref": "sha256:086fcbf6173815d52d9199dde48cc9f8f6e2a91aa80d1dbb439b7ef0aca00e8f",
+  "artifact_classes_covered": [
+    "governed_read_record",
+    "acting_principal_declaration",
+    "read_basis_identity"
+  ],
+  "artifact_classes_excluded": [
+    "read_result_bytes",
+    "principal_identity_verification"
+  ],
+  "attestation_limits": [
+    "This receipt records that a governed read occurred against a declared basis under stated custody. It does not establish that the acting principal's identity was verified, that the basis content is accurate or true, that any admitted result is correct, or that any downstream reliance is warranted. A refused read is recorded as activity, not adjudicated."
+  ],
+  "basis_snapshot_digest": "sha256:a3f7ed1f4415744d9c95b3d7b7815a5b1b45d1151ba3c995afc32bdba6dc9a3a",
+  "basis_version_ref": "counterpedia:record:CP-SIG-15@ADM-EVT-counterpose:CP-SIG-15-0002",
+  "boundary_id": "b:counterpedia-mcp:deploy0-a2a",
+  "boundary_type": "governed_read_boundary",
+  "extensions": {},
+  "identity_posture": "declared",
+  "issued_at": "2026-11-19T09:54:00Z",
+  "issuer_id": "issuer:counterpedia:counterpedia-mcp",
+  "machine_limitations": [
+    {
+      "code": "CONTENT_NOT_VERIFIED"
+    }
+  ],
+  "produced_receipt_refs": [
+    "sha256:1e0a93b4a6d5775f0b7076f42674e9f067144ce1d057ba83f410059e82c7a017",
+    "sha256:630051be154260f9e7e2ddc143435196009d295bffd85c5a4aee97057b5adbb3"
+  ],
+  "profile_id": "srs.activity.governed_read",
+  "profile_version": "v0.1",
+  "protocol_binding": "governed-read-pipeline",
+  "read_disposition": "admitted",
+  "read_request_ref": "sha256:5d83059349c007899f2f66b29c6f427936bab327c328d1d3c32af83aa02d6c97",
+  "receipt_id": "urn:srs:receipt:governed_read:4abd0c2c-8f55-40c8-90bb-3af674f53a10",
+  "receipt_kind": "governed_read",
+  "receipt_signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC8785-JCS",
+    "key_id": "issuer.counterpedia.counterpedia-mcp/receipt-signing/v20261116",
+    "signature": "Lo0J8-Hq5qdey32S2_BZ9kOUoc3f33fEydFAUG7BZGg9QgAZw1vO9dRKNPgbRMLqRScVNZtClLyQ2fqUqBywBg"
+  },
+  "receipt_type": "provenance",
+  "receipt_version": "srs.core.v5.1",
+  "runtime_instance_id": "rt:counterpedia-mcp:deploy0-a2a",
+  "subject_ref": "counterpedia:record:CP-SIG-15@ADM-EVT-counterpose:CP-SIG-15-0002",
+  "visibility": "LOCAL"
+}

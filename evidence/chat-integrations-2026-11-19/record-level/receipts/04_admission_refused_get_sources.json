@@ -1,0 +1,50 @@
+{
+  "actor_ref": "user_abc123",
+  "argument_digest": "sha256:1f8199a72465047483be18955643f2cd0759436bbc1d5ab17091a799a20d61a8",
+  "artifact_classes_covered": [
+    "tool_call_admission"
+  ],
+  "artifact_classes_excluded": [
+    "raw_prompt",
+    "raw_output",
+    "raw_tool_arguments",
+    "raw_tool_result"
+  ],
+  "attestation_limits": [
+    "The receipt attests only to governance conditions at the named admission boundary.",
+    "The governed handler is composed once around the tools/call dispatch of a single stateless Streamable HTTP (protocol 2026-07-28) server app; receipts attest only to observations at that boundary."
+  ],
+  "boundary_id": "b:counterpedia-mcp:deploy0-a2a",
+  "boundary_type": "mcp_tool_call",
+  "disposition": "refused",
+  "extensions": {
+    "mcp": {
+      "binding_version": "official-mcp-sdk.python.v0.2"
+    }
+  },
+  "issued_at": "2026-11-19T09:54:00Z",
+  "issuer_id": "issuer:counterpedia:counterpedia-mcp",
+  "logical_call_id": "call:e88220c6-94f0-4739-b60f-c5ca4b14480e",
+  "policy_pack_id": "policy:counterpedia-public-read",
+  "policy_pack_version": "0.1",
+  "profile_id": "srs.mcp.sdk_enforcement",
+  "profile_version": "v0.1",
+  "protocol_binding": "mcp",
+  "reason_code": "policy_refused",
+  "receipt_id": "urn:srs:receipt:admission:eaecd9ca-cc0b-4669-892d-5010394350e7",
+  "receipt_kind": "admission",
+  "receipt_signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC8785-JCS",
+    "key_id": "issuer.counterpedia.counterpedia-mcp/receipt-signing/v20261116",
+    "signature": "vP6VizS3Qk-jKew0vGMgxQnYvAQpvnMPpndC9yuCDA_4WYQh3GkU5nkD36xJvuKuVZbFmg88FatPmnO7BOQ7BA"
+  },
+  "receipt_type": "sdk_enforcement",
+  "receipt_version": "srs.core.v5.1",
+  "requested_tool_name": "get_sources",
+  "retention_class_applied": "hash_only",
+  "runtime_instance_id": "rt:counterpedia-mcp:deploy0-a2a",
+  "subject_ref": "tool-call:call:e88220c6-94f0-4739-b60f-c5ca4b14480e",
+  "subject_ref_origin": "binding_minted",
+  "tool_resolution_status": "not_observed"
+}

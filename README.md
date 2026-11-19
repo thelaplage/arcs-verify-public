@@ -143,6 +143,13 @@ no access to the issuer's infrastructure. See
 | Open receipt-emitter/runtime binding | Separate repository; not part of this tree |
 | Public reference implementation | ARCS Verify and the examples in this tree |
 
+## Evidence
+
+[evidence/chat-integrations-2026-11-19/](evidence/chat-integrations-2026-11-19/) holds signed test receipts from
+the Counterpedia MCP governed-read tests, with tampered copies and a one-command re-check
+(`python evidence/chat-integrations-2026-11-19/check.py`). They are signed with throwaway test keys, not a
+production trust root.
+
 ## License
 
 Apache-2.0. See [LICENSE](LICENSE). Security reports: see [SECURITY.md](SECURITY.md).

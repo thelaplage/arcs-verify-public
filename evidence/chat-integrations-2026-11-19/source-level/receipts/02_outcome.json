@@ -1,0 +1,47 @@
+{
+  "actor_ref": "user_abc123",
+  "admission_receipt_ref": "urn:srs:receipt:admission:c19a34d0-d030-409b-bbee-46281d9c12d2",
+  "artifact_classes_covered": [
+    "tool_call_outcome"
+  ],
+  "artifact_classes_excluded": [
+    "raw_prompt",
+    "raw_output",
+    "raw_tool_arguments",
+    "raw_tool_result"
+  ],
+  "attestation_limits": [
+    "The receipt attests only to governance conditions at the named admission boundary.",
+    "The receipt establishes the request, admission disposition, and semantic result returned at the configured boundary. It does not independently establish that the underlying tool body executed for this invocation, because middleware such as caches may satisfy a call without handler execution.",
+    "The governed handler is composed once around the tools/call dispatch of a single stateless Streamable HTTP (protocol 2026-07-28) server app; receipts attest only to observations at that boundary."
+  ],
+  "boundary_id": "b:counterpedia-mcp:deploy0-a2a",
+  "boundary_type": "mcp_tool_call",
+  "extensions": {
+    "mcp": {
+      "binding_version": "official-mcp-sdk.python.v0.2"
+    }
+  },
+  "issued_at": "2026-11-19T16:46:00Z",
+  "issuer_id": "issuer:counterpedia:counterpedia-mcp",
+  "logical_call_id": "call:7c124fb8-fe70-4081-adaf-2b822751b9fd",
+  "outcome": "result_returned",
+  "profile_id": "srs.mcp.sdk_enforcement",
+  "profile_version": "v0.1",
+  "protocol_binding": "mcp",
+  "receipt_id": "urn:srs:receipt:outcome:f280208a-5cfb-44c8-983f-f98481e05b3d",
+  "receipt_kind": "outcome",
+  "receipt_signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC8785-JCS",
+    "key_id": "issuer.counterpedia.counterpedia-mcp/receipt-signing/v20261116",
+    "signature": "rwksHmElGig1dp4wkZyXEU7m9JKnwRUkqiyCFYnSfs_cb7PuFP_lQ0fH95Y07aZPma8NUywvzIo883e_R63yAw"
+  },
+  "receipt_type": "sdk_enforcement",
+  "receipt_version": "srs.core.v5.1",
+  "result_digest": "sha256:80611aad447f4c730805d00bcfaaa947f95c796951c156c4b8ba10f33301d428",
+  "retention_class_applied": "hash_only",
+  "runtime_instance_id": "rt:counterpedia-mcp:deploy0-a2a",
+  "subject_ref": "tool-call:call:7c124fb8-fe70-4081-adaf-2b822751b9fd",
+  "subject_ref_origin": "binding_minted"
+}

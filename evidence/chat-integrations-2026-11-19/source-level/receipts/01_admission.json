@@ -1,0 +1,49 @@
+{
+  "actor_ref": "user_abc123",
+  "argument_digest": "sha256:827528cc848f009aa26cf9689c5f9b901b06fe2f6eec6f909bff93bbe0edebd8",
+  "artifact_classes_covered": [
+    "tool_call_admission"
+  ],
+  "artifact_classes_excluded": [
+    "raw_prompt",
+    "raw_output",
+    "raw_tool_arguments",
+    "raw_tool_result"
+  ],
+  "attestation_limits": [
+    "The receipt attests only to governance conditions at the named admission boundary.",
+    "The governed handler is composed once around the tools/call dispatch of a single stateless Streamable HTTP (protocol 2026-07-28) server app; receipts attest only to observations at that boundary."
+  ],
+  "boundary_id": "b:counterpedia-mcp:deploy0-a2a",
+  "boundary_type": "mcp_tool_call",
+  "disposition": "admitted",
+  "extensions": {
+    "mcp": {
+      "binding_version": "official-mcp-sdk.python.v0.2"
+    }
+  },
+  "issued_at": "2026-11-19T16:46:00Z",
+  "issuer_id": "issuer:counterpedia:counterpedia-mcp",
+  "logical_call_id": "call:7c124fb8-fe70-4081-adaf-2b822751b9fd",
+  "policy_pack_id": "policy:counterpedia-public-read",
+  "policy_pack_version": "0.1",
+  "profile_id": "srs.mcp.sdk_enforcement",
+  "profile_version": "v0.1",
+  "protocol_binding": "mcp",
+  "receipt_id": "urn:srs:receipt:admission:c19a34d0-d030-409b-bbee-46281d9c12d2",
+  "receipt_kind": "admission",
+  "receipt_signature": {
+    "algorithm": "Ed25519",
+    "canonicalization": "RFC8785-JCS",
+    "key_id": "issuer.counterpedia.counterpedia-mcp/receipt-signing/v20261116",
+    "signature": "DWFEi6OU8lFqvz2uP_lgeO42JlTCtJECb0M4jK_bOQMnVhXo96X6VRZLrfKGaNW7Tq0csZi6wNJRnLHrSZ1iBw"
+  },
+  "receipt_type": "sdk_enforcement",
+  "receipt_version": "srs.core.v5.1",
+  "requested_tool_name": "get_entry",
+  "retention_class_applied": "hash_only",
+  "runtime_instance_id": "rt:counterpedia-mcp:deploy0-a2a",
+  "subject_ref": "tool-call:call:7c124fb8-fe70-4081-adaf-2b822751b9fd",
+  "subject_ref_origin": "binding_minted",
+  "tool_resolution_status": "not_observed"
+}

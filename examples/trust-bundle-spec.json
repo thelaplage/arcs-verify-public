@@ -1,0 +1,19 @@
+{
+  "bundle_version": "examples-0.1",
+  "issuers": [
+    {
+      "issuer_id": "issuer:stranger0:synthetic-a",
+      "key_id": "issuer.stranger0.synthetic-a/receipt-signing/2026-10",
+      "algorithm": "Ed25519",
+      "public_key": "c_ACb8pCzJKghwq76VNMTA3xcdeLYtPixWUspHgwoOk",
+      "not_before": "2026-10-01T00:00:00Z",
+      "not_after": "2027-10-01T00:00:00Z",
+      "status": "active",
+      "signer_metadata": {
+        "service": "synthetic example signer; test key only",
+        "custody": "test key: treat its private half as publicly known test material",
+        "posture": "demonstration key only; not a real issuer and not for production trust"
+      }
+    }
+  ]
+}

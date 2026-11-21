@@ -17,10 +17,21 @@ index; install it from a checkout.
 
 ## Try it in five minutes
 
-Python 3.11+. No network is needed during verification, and every input is in
-this repository.
+You need Python 3.11 or newer. Check first, because macOS still ships 3.9 as
+`/usr/bin/python3`:
 
 ```bash
+python3 --version
+```
+
+If it prints 3.10 or lower, install a newer Python (python.org, or
+`brew install python@3.12`) and use that interpreter, for example `python3.12`,
+in place of `python3` below. No network is needed during verification, and every
+input is in this repository.
+
+```bash
+git clone https://github.com/thelaplage/arcs-verify-public.git
+cd arcs-verify-public
 python3 -m venv .venv && source .venv/bin/activate
 python -m pip install .
 
@@ -47,6 +58,32 @@ The examples are synthetic. The signing key is a labelled test key that the
 verifier's registry lists as a known public demonstration key, so
 `--trust-policy strict` refuses `issuer_key_trusted` for it by design. See
 [examples/README.md](examples/README.md) and [docs/QUICKSTART.md](docs/QUICKSTART.md).
+
+Then check real receipts. This re-checks the signed receipts from the
+Counterpedia MCP governed-read tests (see [Evidence](#evidence)) under the
+**strict** policy: every receipt must pass and every tampered copy must fail.
+
+```bash
+python evidence/chat-integrations-2026-11-19/check.py
+```
+
+Expected last line: `20 files checked; all expectations held`, exit 0.
+
+**What you have just shown.** A PASS means the receipt's bytes are unchanged
+since they were signed under the listed key, and that the receipt meets its
+profile's rules. A FAIL on the tampered copy shows the check notices a one-byte
+change. Neither result shows that the event described in the receipt really
+happened, or that the key belongs to any particular organisation: these are
+test keys.
+
+### Troubleshooting
+
+| Symptom | Cause and fix |
+|---|---|
+| `No matching distribution found for jsonschema<5,>=4.26` | Python older than 3.11 (often macOS's `/usr/bin/python3`, 3.9). Recreate the venv with Python 3.11+. |
+| `arcs-verify: command not found` | The virtual environment is not active. Run `source .venv/bin/activate` (Windows: `.venv\Scripts\activate`). |
+| `issuer_key_trusted: FAIL` on the `examples/` files with `--trust-policy strict` | Expected: the examples use a published demonstration key that strict policy refuses. Use the default policy for them. |
+| Exit code `2` | A usage or input problem (wrong path, unreadable file), not a verification verdict. |
 
 One precision worth knowing from the start: the signature covers the receipt's
 RFC 8785 canonical JSON content, not the source file's formatting. Reindenting
